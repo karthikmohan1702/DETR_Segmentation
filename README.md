@@ -27,6 +27,7 @@ We later proceed to upsample the activation maps and clean these masks using a c
 
 ### References
 
+- https://arxiv.org/pdf/2005.12872.pdf
 - https://www.youtube.com/watch?v=utxbUlo9CyY
 
 
