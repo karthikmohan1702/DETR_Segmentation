@@ -15,9 +15,9 @@ DeTR utilizes Resnet50 architecture to perform the convolutions. When we have an
 ![image](https://user-images.githubusercontent.com/47082769/131225487-0f2cc3c8-1c8c-4fc5-ae0e-c613181b31fc.png)
 
 
-Then this is passed to a Encoder-Decoder block (Nx - number of blocks in encoder & decoder would be same) where in the encoder we would be having Self attention for keys & values & in decoder queries would be fed & it goes through self attention & also cross attention  (where keys, values  comes from encoder & it interacts with the query from the decoder). Finally we arrive at the encodded image **d x H/32 x W/32** which will be fed to Multi head Attention.
+Then this is passed to a Encoder-Decoder block (Nx - number of blocks in encoder & decoder would be same) where in the encoder we would be having Self attention for keys & values & in decoder queries would be fed & it goes through self attention & also cross attention  (where keys, values  comes from encoder & it interacts with the query from the decoder). Finally we arrive at the encodded image **d x H/32 x W/32** where we would be having object embeddings, taking the below image as an example, the object embeddings would be - for the foreground cow and an embedding for the each segment of the background namely the sky, grass and trees. We then use a **multihead attenttion** layer that returns the attention scores for the encoded image for each object embedding.
 
-**Multi Head Attention** - In DeTR a multi head attention is a combination of Encoders and Decoders. The encoded image is passed to the Multi head attention
+
 
 
 
